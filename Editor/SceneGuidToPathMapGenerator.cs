@@ -23,7 +23,7 @@ namespace Eflatun.SceneReference.Editor
         {
             const string dotKeepFileContent = "Add this file to version control. See for explanation: https://stackoverflow.com/a/17929518/6301627";
             
-            EditorLogger.Debug("Generating scene GUID to path map.");
+            Eflatun.SceneReference.Editor.EditorLogger.Debug("Generating scene GUID to path map.");
             
             try
             {
