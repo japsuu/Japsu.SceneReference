@@ -12,6 +12,26 @@ namespace Eflatun.SceneReference.Editor
     [PublicAPI]
     public static class SceneGuidToPathMapGenerator
     {
+        internal static void Debug(string msg)
+        {
+            if(SettingsManager.SceneGuidToPathMap.EnableInfoLogging.value)
+                UnityEngine.Debug.Log($"{Constants.LogPrefixBase} {msg}");
+        }
+        
+        
+        internal static void Warn(string msg)
+        {
+            if(SettingsManager.SceneGuidToPathMap.EnableWarnLogging.value)
+                UnityEngine.Debug.LogWarning($"{Constants.LogPrefixBase} {msg}");
+        }
+        
+        
+        internal static void Error(string msg)
+        {
+            if(SettingsManager.SceneGuidToPathMap.EnableErrorLogging.value)
+                UnityEngine.Debug.LogError($"{Constants.LogPrefixBase} {msg}");
+        }
+        
         /// <summary>
         /// Runs the generator.
         /// </summary>
@@ -23,7 +43,7 @@ namespace Eflatun.SceneReference.Editor
         {
             const string dotKeepFileContent = "Add this file to version control. See for explanation: https://stackoverflow.com/a/17929518/6301627";
             
-            Eflatun.SceneReference.Editor.EditorLogger.Debug("Generating scene GUID to path map.");
+            SceneGuidToPathMapGenerator.Debug("Generating scene GUID to path map.");
             
             try
             {
