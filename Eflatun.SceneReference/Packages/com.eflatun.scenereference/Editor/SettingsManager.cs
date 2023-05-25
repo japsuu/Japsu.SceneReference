@@ -76,6 +76,33 @@ namespace Eflatun.SceneReference.Editor
                 = new ProjectSetting<bool>("SceneGuidToPathMap.FailBuildIfGenerationFails", true);
 
             /// <summary>
+            /// Should we enable logging?<br/>
+            /// It is recommended to leave this option at 'true'.
+            /// </summary>
+            /// <remarks><inheritdoc cref="SettingsManager"/></remarks>
+            [field: UserSetting(CategoryName, "Enable info logging", "Should we enable info logging?")]
+            public static ProjectSetting<bool> EnableInfoLogging { get; }
+                = new ProjectSetting<bool>("SceneGuidToPathMap.EnableInfoLogging", true);
+
+            /// <summary>
+            /// Should we enable logging?<br/>
+            /// It is recommended to leave this option at 'true'.
+            /// </summary>
+            /// <remarks><inheritdoc cref="SettingsManager"/></remarks>
+            [field: UserSetting(CategoryName, "Enable warn logging", "Should we enable warn logging?")]
+            public static ProjectSetting<bool> EnableWarnLogging { get; }
+                = new ProjectSetting<bool>("SceneGuidToPathMap.EnableWarnLogging", true);
+
+            /// <summary>
+            /// Should we enable logging?<br/>
+            /// It is recommended to leave this option at 'true'.
+            /// </summary>
+            /// <remarks><inheritdoc cref="SettingsManager"/></remarks>
+            [field: UserSetting(CategoryName, "Enable error logging", "Should we enable error logging?")]
+            public static ProjectSetting<bool> EnableErrorLogging { get; }
+                = new ProjectSetting<bool>("SceneGuidToPathMap.EnableErrorLogging", true);
+
+            /// <summary>
             /// Returns whether the given <paramref name="trigger"/> is enabled in the settings.
             /// </summary>
             /// <seealso cref="GenerationTriggers"/>
