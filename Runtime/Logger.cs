@@ -9,21 +9,21 @@
         
         internal static void Debug(string msg)
         {
-            if(UnityEditor.SettingsManager.SceneGuidToPathMap.EnableInfoLogging.value)
+            if(Eflatun.SceneReference.Editor.SettingsManager.SceneGuidToPathMap.EnableInfoLogging.value)
                 UnityEngine.Debug.Log($"{Constants.LogPrefixBase} {msg}");
         }
         
         
         internal static void Warn(string msg)
         {
-            if(UnityEditor.SettingsManager.SceneGuidToPathMap.EnableWarnLogging.value)
+            if(Eflatun.SceneReference.Editor.SettingsManager.SceneGuidToPathMap.EnableWarnLogging.value)
                 UnityEngine.Debug.LogWarning($"{Constants.LogPrefixBase} {msg}");
         }
         
         
         internal static void Error(string msg)
         {
-            if(UnityEditor.SettingsManager.SceneGuidToPathMap.EnableErrorLogging.value)
+            if(Eflatun.SceneReference.Editor.SettingsManager.SceneGuidToPathMap.EnableErrorLogging.value)
                 UnityEngine.Debug.LogError($"{Constants.LogPrefixBase} {msg}");
         }
     }
